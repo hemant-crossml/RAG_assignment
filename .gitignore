@@ -1,4 +1,10 @@
-__pycache__/
-.env
+# Logs
 logs/
+*.log
+
+# Environment files
+.env
+
+# Virtual environments
 venv/
+__pycache__/

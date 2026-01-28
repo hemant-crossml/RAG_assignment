@@ -1,8 +1,7 @@
-langchain
-langchain-community
-pypdf
-pymupdf
-langchain-text-splitters
-langchain-google-genai
-python-dotenv
-faiss-cpu
+langchain-community==0.4.1
+langchain-community==0.4.1
+pypdf==6.6.2
+langchain-text-splitters==1.1.0
+langchain-google-genai==4.2.0
+python-dotenv==1.2.1
+faiss-cpu==1.13.2
