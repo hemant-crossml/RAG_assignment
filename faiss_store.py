@@ -1,3 +1,17 @@
+"""
+This module provides utilities for creating, persisting, and loading
+FAISS-based vector indexes using LangChain.
+
+It enables:
+- Building a FAISS vector store from a collection of documents and
+  application-configured embeddings
+- Saving the vector index to local storage
+- Reloading an existing FAISS index for downstream retrieval or search
+
+All operations are logged for observability, and exceptions are propagated
+to ensure indexing or loading failures are not silently ignored.
+"""
+
 from langchain_community.vectorstores import FAISS
 
 from client import embeddings

@@ -1,3 +1,12 @@
+"""
+This module provides utilities for loading PDF documents from a directory
+using LangChain document loaders.
+
+It supports recursive discovery of PDF files and lazy loading via
+`DirectoryLoader` and `PyPDFLoader`, enabling efficient ingestion of large
+document collections. All document loading operations are logged, and
+errors are propagated to ensure failures are visible to the caller.
+"""
 from langchain_community.document_loaders import (
     DirectoryLoader,
     PyPDFLoader,

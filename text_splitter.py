@@ -1,3 +1,13 @@
+"""
+This module provides utilities for splitting documents into smaller,
+overlapping text chunks for downstream embedding and retrieval.
+
+It uses LangChain’s `RecursiveCharacterTextSplitter` with application-
+configured chunk size and overlap parameters to preserve semantic
+continuity across chunks. All splitting operations are logged, and
+errors are propagated to ensure failures are visible to the caller.
+"""
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from config import CHUNK_SIZE, CHUNK_OVERLAP

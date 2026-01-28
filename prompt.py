@@ -1,3 +1,16 @@
+"""
+This module defines the prompt template used by the Retrieval-Augmented
+Generation (RAG) pipeline.
+
+It provides a structured chat prompt that strictly enforces context-grounded
+responses, ensuring the AI assistant answers user queries only using the
+retrieved document context. The prompt includes explicit behavioral rules,
+response guidelines, greeting handling, and fallback behavior when relevant
+information is unavailable.
+
+Prompt creation is logged for observability, and any failures during template
+construction are surfaced through logged exceptions.
+"""
 from langchain_core.prompts import ChatPromptTemplate
 
 from logger_config import get_logger

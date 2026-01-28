@@ -1,3 +1,17 @@
+"""
+This module provides a centralized logger configuration utility for the
+application.
+
+It defines a helper function to create and return a configured `logging.Logger`
+instance with:
+- A rotating file handler for persistent logs
+- A console handler for real-time output
+- A consistent, timestamped log format
+- Protection against duplicate handler registration
+
+The logger is intended to be imported and reused across modules to ensure
+uniform logging behavior throughout the application.
+"""
 import logging
 import os
 from logging.handlers import RotatingFileHandler

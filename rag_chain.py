@@ -1,3 +1,17 @@
+"""
+This module defines the construction of the Retrieval-Augmented Generation
+(RAG) inference chain using LangChain Expression Language (LCEL).
+
+It combines:
+- A vector store retriever for fetching relevant document chunks
+- A structured prompt template enforcing context-grounded responses
+- A generative language model for answer synthesis
+
+The resulting runnable forms an end-to-end RAG pipeline that maps user
+questions to retrieved context and generates responses based strictly
+on that context. All construction steps are logged, and errors are
+propagated to prevent silent failures.
+"""
 from langchain_core.runnables import RunnablePassthrough
 
 from prompt import get_rag_prompt

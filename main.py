@@ -1,3 +1,17 @@
+"""
+This module serves as the main entry point for the stateless
+Retrieval-Augmented Generation (RAG) chatbot application.
+
+It orchestrates the end-to-end startup flow, including:
+- Loading and preprocessing source documents
+- Creating or loading a persisted FAISS vector index
+- Building the RAG inference chain
+- Running an interactive command-line chat loop
+
+The application is designed to be stateless across runs, rebuilding
+the vector store only when it does not already exist. All major steps
+and failures are logged to ensure observability and debuggability.
+"""
 import os
 
 from docs_loader import load_documents

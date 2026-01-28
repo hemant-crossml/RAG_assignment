@@ -1,3 +1,16 @@
+"""
+This module loads and validates environment-based credentials required for
+accessing the Google Gemini API.
+
+It retrieves the Gemini API key from a `.env` file using `python-dotenv`,
+ensuring the key is present before allowing the application to proceed.
+If the required credential is missing, the module logs a critical error
+and raises an exception to prevent the application from running in an
+invalid state.
+
+All credential-loading steps are logged for observability and debugging.
+"""
+
 import os
 
 from dotenv import load_dotenv
